@@ -12,6 +12,7 @@ public class Main {
     // 当且仅当它们代表的整数相等时，此方法返回true
     // 不要修改本方法参数的类型
     public static boolean compare(int a, Integer b) {
-        return a == b;
+        // 和原始类型比较时自动拆箱，可能会引发空指针异常
+        return b != null && a == b;
     }
 }
