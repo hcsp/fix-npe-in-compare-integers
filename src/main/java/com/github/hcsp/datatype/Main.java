@@ -12,6 +12,10 @@ public class Main {
     // 当且仅当它们代表的整数相等时，此方法返回true
     // 不要修改本方法参数的类型
     public static boolean compare(int a, Integer b) {
-        return a == b;
+        boolean flag = false;
+        if (b != null) {
+            flag = b.equals(a);
+        }
+        return flag;
     }
 }
