@@ -1,5 +1,9 @@
 package com.github.hcsp.datatype;
 
+import com.sun.corba.se.impl.naming.cosnaming.InternalBindingValue;
+
+import java.security.PrivateKey;
+
 public class Main {
     // 修复compare方法，使得main方法不再抛出空指针异常
     public static void main(String[] args) {
@@ -12,6 +16,12 @@ public class Main {
     // 当且仅当它们代表的整数相等时，此方法返回true
     // 不要修改本方法参数的类型
     public static boolean compare(int a, Integer b) {
-        return a == b;
+        return a == Integer2int(b);
+    }
+    private static int Integer2int(Integer x){
+        if (x == null) {
+            return 0;
+        }
+        return x.intValue();
     }
 }
