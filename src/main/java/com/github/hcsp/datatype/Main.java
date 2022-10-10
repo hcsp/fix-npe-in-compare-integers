@@ -12,10 +12,6 @@ public class Main {
     // 当且仅当它们代表的整数相等时，此方法返回true
     // 不要修改本方法参数的类型
     public static boolean compare(int a, Integer b) {
-        System.out.println("b = " + b);
-        if (b == null) {
-            return false;
-        }
-        return a == Integer.valueOf(b);
+        return a == b;
     }
 }
